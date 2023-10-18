@@ -68,10 +68,10 @@ Thank you for checking out StarManager. We hope it helps you effectively manage 
 
 Best regards,
 
-[ Puneet Bajaj ]
+Puneet Bajaj
 
 ---
 
-*LinkedIn Profile: [Your LinkedIn Profile](https://www.linkedin.com/in/puneet-bajaj-iitm)*
+*LinkedIn Profile: [Puneet-Bajaj-IITM](https://www.linkedin.com/in/puneet-bajaj-iitm)*
 
-*GitHub Profile: [Your GitHub Profile](https://github.com/puneet-bajaj-iitm)*
+*GitHub Profile: [Puneet-Bajaj-IITM](https://github.com/puneet-bajaj-iitm)*
