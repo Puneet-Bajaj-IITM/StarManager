@@ -1,0 +1,62 @@
+{% extends "csv.html" %}
+
+{% block index %}
+        <div class="row mb-3">
+            <div class="accordion" id="accordionExample1">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <form action="/add">
+                        <button class="accordion-button collapsed" value="1" name="q" type="submit" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Add a New Record
+                        </button>
+                    </form>
+                  </h2>
+                  </div>
+                </div>
+              </div>
+        <div class="row mb-3">
+            <div class="accordion" id="accordionExample2">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Update Records
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <form action="/update" class="row g-3" method="get">
+                            <div class="input-group mb-3">
+                                <input autofocus type="number" name="id" class="form-control" placeholder="Enter a Valid ITEM ID" aria-describedby="button-addon2">
+                                <button class="btn btn-outline-primary" type="submit" id="button-addon2">Update Records</button>
+                              </div>
+                        </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="row mb-3">
+          <div class="accordion" id="accordionExample4">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Remove a Record
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <form action="/remove" class="row g-3" method="get">
+                       
+                          <div class="input-group mb-3">
+                              <input type="number" autofocus name="id" class="form-control" placeholder="Enter a Valid ITEM ID" aria-describedby="button-addon4">
+                              <button class="btn btn-outline-primary" type="submit" id="button-addon4">Remove Record</button>
+                            </div>
+                      </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+      
+          
+{% endblock %}

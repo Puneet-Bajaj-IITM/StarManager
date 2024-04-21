@@ -1,12 +1,14 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from io import BytesIO
+import base64
 import sys
 
 FILE_Category="Star.csv"
 
 
 def fetchCSV():
-    df1 = pd.read_csv(FILE_Category, index_col="Itemid")
+    df1 = pd.read_csv(FILE_Category, index_col="ID")
     return df1
 
 def writeCSV(df):
@@ -19,11 +21,22 @@ def showLinePlot(df):
     print("line plot")
     x1=df["Category"]
     y1=df['Price'] 
-    plt.title("shoe records")
-    plt.xlabel("Category of shoe")
-    plt.ylabel("Price of shoe")
+    plt.title("All Records")
+    plt.xlabel("Category of Record")
+    plt.ylabel("Price of Record")
     plt.plot(x1,y1,marker="*",linestyle=":", linewidth=3,color="red",markersize=10)
-    plt.show()
+    plt.tight_layout()
+
+    # Save the plot to a BytesIO object
+    image_stream = BytesIO()
+    plt.savefig(image_stream, format='png')
+    image_stream.seek(0)
+
+    # Encode the image stream to base64 for HTML rendering
+    lineplot = base64.b64encode(image_stream.read()).decode('utf-8')
+    plt.close()  # Close the plot to release resources
+
+    return lineplot
 
 def showBarPlot(df):
     print("bar plot")
@@ -34,7 +47,18 @@ def showBarPlot(df):
     plt.bar(x,y,color='red', width=0.5)
     plt.ylabel('Quantity')
     plt.title("Stock details")
-    plt.show()
+    plt.tight_layout()
+
+    # Save the plot to a BytesIO object
+    image_stream = BytesIO()
+    plt.savefig(image_stream, format='png')
+    image_stream.seek(0)
+
+    # Encode the image stream to base64 for HTML rendering
+    barplot = base64.b64encode(image_stream.read()).decode('utf-8')
+    plt.close()  # Close the plot to release resources
+
+    return barplot
 
 def addNewshoe(df):
     Brand= input("Enter Brand: ") 
@@ -78,7 +102,6 @@ def reportTotalQuantity(df): print("Total Quantity is:- ",df['Quantity'].sum())
     
 
 def showMainMenu(df):
-    print("Enter 3 to update record")
     print() 
     print()
     print("-------Main Menu-------")

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="mb-3">
+        <form action="/add" method="post">
+            <div class="mb-3">
+                <input type="text" class="form-control" name="typename" placeholder="Enter the Type Name">
+            </div>
+            <div class="mb-3">
+                <input type="number" class="form-control" name="company_id" placeholder="Enter the Company ID">
+            </div>
+            <input type="hidden" name="created_by" value="test user">
+            <input type="hidden" name="updated_by" value="test user">
+            <button class="form-btn btn-outline-primary" type="submit">Create Record</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="mb-3">
+        <form action="/update/{{ activity_id }}" method="post">
+            <div class="mb-3">
+                <input type="text" id="typename" class="form-control" value="{{ data['TypeName'] }}" name="typename" placeholder="New Type Name">
+            </div>
+            <div class="mb-3">
+                <input type="number" id="company_id" class="form-control" value="{{ data['CompanyID'] }}" name="company_id" placeholder="New Company ID">
+            </div>
+            <button class="form-btn btn-outline-primary" type="submit">Update Record</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,7 +1,4 @@
-Itemid,Brand,Category,Quantity,Price
-105,Nike,Sports,107.0,2250.0
-106,Adidas,Sneakers,50.0,4500.0
-108,woodland,Sneakers,66.0,5495.0
-109,Reebok,Sports,100.0,4500.0
-110,Puma,Sports,35.0,3500.0
-12,ee,ee,2.0,12.0
+ID,TypeName,CompanyID,CreatedBy,CreatedOn,UpdatedOn,UpdatedBy
+1,TypeA,101,User1,2024-04-20 08:00:00,2024-04-20 08:00:00,User1
+2,TypeB,102,User2,2024-04-20 08:15:00,2024-04-20 08:15:00,User2
+3,TypeC,103,User3,2024-04-20 08:30:00,2024-04-20 08:30:00,User3
